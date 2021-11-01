@@ -3137,7 +3137,7 @@
           "_symbol",
           0
         ],
-        "minzoom": 11,
+        "minzoom": 20,
         "layout": {
           "icon-image": "OS/Railway_stations/Light Rapid Transit Station",
           "icon-size": {
@@ -3178,7 +3178,7 @@
           "_symbol",
           1
         ],
-        "minzoom": 13,
+        "minzoom": 20,
         "layout": {
           "icon-image": "OS/Railway_stations/Light Rapid Transit Station And London Underground Station",
           "icon-size": {
@@ -3219,8 +3219,8 @@
           "_symbol",
           1
         ],
-        "minzoom": 11,
-        "maxzoom": 13,
+        "minzoom": 20,
+        "maxzoom": 30,
         "layout": {
           "icon-image": "OS/Railway_stations/Light Rapid Transit Station And London Underground Station_1",
           "icon-allow-overlap": true
@@ -3237,7 +3237,7 @@
           "_symbol",
           2
         ],
-        "minzoom": 11,
+        "minzoom": 20,
         "layout": {
           "icon-image": "OS/Railway_stations/Light Rapid Transit Station And Railway Station",
           "icon-size": {
@@ -3278,7 +3278,7 @@
           "_symbol",
           3
         ],
-        "minzoom": 11,
+        "minzoom": 20,
         "layout": {
           "icon-image": "OS/Railway_stations/London Underground Station",
           "icon-size": {
@@ -3319,7 +3319,7 @@
           "_symbol",
           4
         ],
-        "minzoom": 11,
+        "minzoom": 20,
         "layout": {
           "icon-image": "OS/Railway_stations/Railway Station",
           "icon-size": {
@@ -3360,7 +3360,7 @@
           "_symbol",
           5
         ],
-        "minzoom": 13,
+        "minzoom": 20,
         "layout": {
           "icon-image": "OS/Railway_stations/Railway Station And London Underground Station",
           "icon-size": {
@@ -3401,8 +3401,8 @@
           "_symbol",
           5
         ],
-        "minzoom": 11,
-        "maxzoom": 13,
+        "minzoom": 20,
+        "maxzoom": 30,
         "layout": {
           "icon-image": "OS/Railway_stations/Railway Station And London Underground Station_1",
           "icon-allow-overlap": true
@@ -3994,8 +3994,8 @@
           "_label_class1",
           1
         ],
-        "minzoom": 11,
-        "maxzoom": 13,
+        "minzoom": 20,
+        "maxzoom": 30,
         "layout": {
           "text-font": [
             "Source Sans Pro Regular"
@@ -4074,7 +4074,7 @@
           "_label_class",
           0
         ],
-        "minzoom": 13,
+        "minzoom": 20,
         "layout": {
           "text-font": [
             "Source Sans Pro Regular"
