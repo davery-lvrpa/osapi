@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>OS Vector Tile API | Example Custom Style | ArcGIS API for JavaScript</title>
+    <link rel="stylesheet" href="https://labs.os.uk/public/os-api-branding/v0.3.0/os-api-branding.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css">
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .esri-view .esri-view-surface--inset-outline:focus::after {
+        outline: 0 !important;
+      }
+      .esri-ui .esri-attribution {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+
+    <script src="https://labs.os.uk/public/os-api-branding/v0.3.0/os-api-branding.js" data-div="viewDiv" data-prefix="Powered by Esri"></script>
+    <script src="https://js.arcgis.com/4.16/"></script>
+    <script>
+
+      var apiKey = 'q73kmhKE6EnzwFHeTjd0qy1hA3uT0E66';
+  
+      var serviceUrl = 'https://api.os.uk/maps/vector/v1/vts';
+  
+      // Define the custom JSON style.
+      // More styles can be found at https://github.com/OrdnanceSurvey/OS-Vector-Tile-API-Stylesheets.
+      //var customStyleJson = 'https://raw.githubusercontent.com/OrdnanceSurvey/OS-Vector-Tile-API-Stylesheets/master/OS_VTS_3857_Open_Greyscale.json';
+      var customStyleJson = 'https://raw.githubusercontent.com/davery-lvrpa/osapi/main/lvrpa_gray.json';
+    
+      var map, view;
+  
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/layers/VectorTileLayer",
+        "esri/config"
+      ], function(Map, MapView, VectorTileLayer, esriConfig) {
+        // Add the 'key' and 'srs' options to the request URL before it is sent.
+        esriConfig.request.interceptors.push({
+          urls: serviceUrl,
+          before: function(params) {
+            if(! params.requestOptions.query ) {
+              params.requestOptions.query = {};
+            }
+            params.requestOptions.query.key = apiKey;
+            params.requestOptions.query.srs = 3857;
+          }
+        });
+  
+        var tileLayer = new VectorTileLayer({
+          url: customStyleJson
+        });
+  
+        map = new Map({
+          layers: [ tileLayer ]
+        });
+  
+        view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 13,
+          center: [ -0.0246, 51.6404 ],
+          constraints: {
+            minZoom: 6,
+            maxZoom: 21,
+            rotationEnabled: false
+            }
+        });
+      });
+
+    </script>
+
+  </body>
+</html>
