@@ -3414,7 +3414,7 @@
         "type": "symbol",
         "source": "esri",
         "source-layer": "Airports",
-        "minzoom": 8,
+        "minzoom": 30,
         "layout": {
           "icon-image": "OS/Airports",
           "icon-size": {
@@ -4624,8 +4624,8 @@
           "_label_class1",
           1
         ],
-        "minzoom": 10,
-        "maxzoom": 13,
+        "minzoom": 30,
+        "maxzoom": 30,
         "layout": {
           "text-font": [
             "Source Sans Pro Regular"
@@ -4655,7 +4655,7 @@
           "_label_class",
           0
         ],
-        "minzoom": 13,
+        "minzoom": 30,
         "layout": {
           "text-font": [
             "Source Sans Pro Regular"
